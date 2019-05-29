@@ -3,16 +3,15 @@
    Fibonacci Sequence Program using slow algorithm
 */
 
+config var args: int = 10;
 
-proc fib(x: int) : int
+proc fib(args: int) : int 
 {
 	 
-	 if x > 1 then 
-	    return fib(x-1) + fib(x-2);
+	 if args > 1 then 
+	    return fib(args-1) + fib(args-2);
 	 else 
-	    return x;
+	    return args;
 }
 
-writeln("Fib Sequence for 4 is ", fib(4));
-writeln("Fib Sequence for 8 is ", fib(8));
-writeln();
+writeln(fib(args));
