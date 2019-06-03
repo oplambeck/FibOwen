@@ -4,14 +4,13 @@
 */
 
 config var args: int = 10;
-
-proc fib(args: int) : int 
-{
-	 
-	 if args > 1 then 
-	    return fib(args-1) + fib(args-2);
-	 else 
-	    return args;
+/* fib proc takes in and int as an argument and if the arg is greater than one recursivly calls back
+   to compute fib sequence. Else it returns the args, which is written out. 
+ */
+proc fib(args: int) : int{
+  if args > 1 then
+	  return fib(args-1) + fib(args-2);
+	else
+    return args;
 }
-
 writeln(fib(args));
